@@ -23,8 +23,8 @@ struct BTNode
 	// to_string
 	virtual std::string to_string() const {
 		std::ostringstream os;
-//		os << data;
-		return data.str();
+		os << data;
+		return os.str();
 	}
 }; // End BTNode
 
