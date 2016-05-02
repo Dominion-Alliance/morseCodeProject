@@ -155,6 +155,9 @@
   <ItemGroup>
     <ClCompile Include="Morse.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="morseTree.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
