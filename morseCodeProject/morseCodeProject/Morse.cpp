@@ -21,12 +21,11 @@ void displayTree(vector<string> &a)
 
 int main()
 {
-	//int index = 0; //No idea what this number should start as
-	//vector<string>buildTree;
-	//displayTree(buildTree);
-	Binary_Tree<string> morse; // Problem here
-							   //morse.read_binary_tree(buildTree, index);
+	vector<string>buildTree;
+	displayTree(buildTree);
+	Binary_Tree<string> morse;
+	morse.read_tree(buildTree);
+	displayTree(buildTree);
 
 	return 0;
-
 }
