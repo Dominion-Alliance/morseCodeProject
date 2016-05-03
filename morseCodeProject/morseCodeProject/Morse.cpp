@@ -19,6 +19,23 @@ void displayTree(vector<string> &a)
 	}
 }
 
+string encodeText(string& str) //encode message ie.: "ch" to •_  _•_•
+{
+	char letter;
+	string output;
+	for (int i = 0; i < str.length(); i++)
+	{
+		letter = tolower(str[i]);	//check all lowercase
+	
+		if (letter >= 'a' && letter <= 'z') //check within limits
+		{
+			output = output + morse[];		//dont know what to do here
+		}
+	output.push_back(' ');					//add space
+	}
+	return output;
+}
+
 int main()
 {
 	vector<string>buildTree;
