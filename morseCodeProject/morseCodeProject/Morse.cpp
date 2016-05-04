@@ -66,8 +66,6 @@ int main()
 	Binary_Tree<string> morse;
 	morse.read_tree(buildTree);
 	displayTree(buildTree);
-	string myString = "••- -- -•- -•-•";
-	cout << myString << endl;
-	cout << decodeMorse(myString, morse) << endl;
+
 	return 0;
 }
