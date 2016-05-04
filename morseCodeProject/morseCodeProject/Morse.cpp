@@ -25,11 +25,10 @@ string encodeText(string& str) //encode message ie.: "ch" to •_  _•_•
 	string output;
 	for (int i = 0; i < str.length(); i++)
 	{
-		letter = tolower(str[i]);	//check all lowercase
-	
+		letter = tolower(str[i]);			//check/change all to lowercase
 		if (letter >= 'a' && letter <= 'z') //check within limits
-		{
-			output = output + morse[];		//dont know what to do here
+		{												//return morse code in string
+			//output = const char* find(const char& i) const;		//dont know what to do here
 		}
 	output.push_back(' ');					//add space
 	}
@@ -43,6 +42,5 @@ int main()
 	Binary_Tree<string> morse;
 	morse.read_tree(buildTree);
 	displayTree(buildTree);
-
 	return 0;
 }
