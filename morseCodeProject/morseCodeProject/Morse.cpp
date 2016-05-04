@@ -35,6 +35,30 @@ string encodeText(string& str) //encode message ie.: "ch" to •_  _•_•
 	return output;
 }
 
+string decodeMorse(string &str, Binary_Tree<string> morse)
+{
+	string output = "";
+	BTNode<string>* root = morse.getRoot();
+	BTNode<string>* current = root;
+	for (int i = 0; i < str.length(); i++)
+	{
+		if (str[i] == '-')
+		{
+			current = current->right;
+		}
+		if (str[i] == '•')
+		{
+			current = current->left;
+		}
+		if (str[i] == ' ' || i == str.length()-1)
+		{
+			output += current->to_string();
+			current = root;
+		}
+	}
+	return output;
+}
+
 int main()
 {
 	vector<string>buildTree;
@@ -42,5 +66,8 @@ int main()
 	Binary_Tree<string> morse;
 	morse.read_tree(buildTree);
 	displayTree(buildTree);
+	string myString = "••- -- -•- -•-•";
+	cout << myString << endl;
+	cout << decodeMorse(myString, morse) << endl;
 	return 0;
 }
