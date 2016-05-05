@@ -23,10 +23,11 @@ string encodeText(string& str, Binary_Tree<string> morse)
 {
 	char letter;
 	string output;
+	string code;
 	for (int i = 0; i < str.length(); i++)
 	{
-		letter = tolower(str[i]);			
-		if (letter >= 'a' && letter <= 'z') 
+		//letter = tolower(str[i]);			
+		//if (letter >= 'a' && letter <= 'z') 
 		{	
 			switch (str[i])
 			{
@@ -111,12 +112,11 @@ string encodeText(string& str, Binary_Tree<string> morse)
 			default:
 				cout << "Not a valid entry.";
 			}
-
-			//output = const char* find(const char& i) const;
+			code += output;
 		}
-	output.push_back(' ');				
+	code.push_back(' ');				
 	}
-	return output;
+	return code;
 }
 
 string decodeMorse(string &str, Binary_Tree<string> morse)
@@ -124,7 +124,7 @@ string decodeMorse(string &str, Binary_Tree<string> morse)
 	string output = "";
 	BTNode<string>* root = morse.getRoot();
 	BTNode<string>* current = root;
-	for (int i = 0; i < str.length(); i++)
+	for (int i = 0; i < str.length()+1; i++)
 	{
 		if (str[i] == '-')
 		{
@@ -151,8 +151,9 @@ int main()
 	morse.read_tree(buildTree);
 	displayTree(buildTree);
 
-	string myStr = "ch";
+	string myStr = "abc";
+	cout << myStr << endl;
 	cout << encodeText(myStr, morse) << endl;
-	
+	system("pause");
 	return 0;
 }
