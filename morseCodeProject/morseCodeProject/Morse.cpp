@@ -150,10 +150,11 @@ int main()
 	Binary_Tree<string> morse;
 	morse.read_tree(buildTree);
 	displayTree(buildTree);
-
 	string myStr = "abc";
 	cout << myStr << endl;
 	cout << encodeText(myStr, morse) << endl;
-	system("pause");
+	myStr = "••- -- -•- -•-•";
+	cout << myStr << endl;
+	cout << decodeMorse(myStr, morse) << endl;
 	return 0;
 }
